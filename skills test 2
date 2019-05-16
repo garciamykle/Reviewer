@@ -1,0 +1,66 @@
+#include <iostream>
+#include <conio.h>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+	//Declaration
+	double length, width, costframe, costcolor, costcrown, areaz, r, f, c, w, crown, frame, color, cardboard, glass, area;
+	
+
+	area = (length * width);
+	cardboard = 0.02;
+	glass = 0.07;
+
+	cout << "Welcome to Mang Piolo's Shop!" << endl;
+	cout << "\nPlease input your desired length for the frame.";
+	cin >> length ;
+
+	cout << "\nPlease input your desired width for the frame.";
+	cin >> width ;
+
+
+	
+	
+	cout << "\nWhat type of frame do you prefer Regular or Fancy? r || f ";
+	cin >> frame;
+		{
+			if (frame == r)
+				
+				costframe = 0.15;
+		
+			else if (frame == f)
+				costframe = 0.25;
+		}
+	
+
+	
+	cout << "Do you want the frame to be white or colored? w || c " ;
+	cin >> color;
+		{
+			if (color == c)
+
+				costcolor = 0.10;
+			else
+				costcolor = 0;
+		}
+	
+
+	
+	cout << "\nHow many crowns do you want to put to the frame? " ;
+	cin >> crown ;	
+		{
+			if (crown > 0)
+				costcrown = 0.35;
+			else if (crown == 0)
+				costcrown = 0;
+		}
+	
+	cout << " \nTotal payment with cardboard and glass added is: $ " << (costframe * length) + (costframe * width) +(areaz * cardboard) + (areaz * glass) + (costcolor * length) + (costcolor * width) + (crown * costcrown) << endl;
+	cout << " Thank You for Choosing Mang Piolo's Shop! " << endl;
+		
+_getch ();
+	
+return 0;
+}
