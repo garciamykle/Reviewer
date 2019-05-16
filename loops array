@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	double sales [10];
+	int index, maxIndex;
+	double largestSale, sum, average;
+	
+	for(index = 0;index <10;index++)
+		sales[index] = 0.0;
+	for(index = 0;index <10;index++)
+		cin >> sales[index];
+	for(index = 0;index <10;index++)
+		cout << sales[index] << " ";
+	sum = 0;
+		for (index = 0;index < 10; index++)
+		sum = sum + sales[index];
+		cout <<"\nsum =" << sum << endl;
+		
+	average = sum / 10;
+		cout << "\naverage =" << average << endl;
+	maxIndex = 0;
+		for (index = 1;index < 10; index++)
+			if (sales[maxIndex] < sales[index])
+			maxIndex = index;
+	largestSale = sales[maxIndex];
+		cout << "\nLargest Sale =" << largestSale << endl;	
+	
+	return 0;
+}
